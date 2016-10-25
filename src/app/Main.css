@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Bold.ttf');
+}
+
+.root {
+    -fx-background-color: #ffffff;
+}
+
+.main {
+    -fx-padding: 16px;
+}
+
+.text {
+    -fx-font-family: "Roboto";
+    -fx-pref-height: 40px;
+}
+
+.text-field {
+    -fx-pref-height: 40px;
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: #25abf2;
+    -fx-border-width: 1px 0 1px 1px;
+    -fx-padding: 0;
+    -fx-text-fill: black;
+    -fx-font-size: 20px;
+    -fx-font-family: "Roboto";
+    -fx-pref-width: 130px;
+}
+
+.label {
+    -fx-pref-height: 40px;
+    -fx-text-fill: black;
+    -fx-font-size: 20px;
+    -fx-padding: 0 4px;
+}
+
+.menu-button {
+    -fx-pref-height: 40px;
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: #25abf2;
+    -fx-border-width: 1px;
+    -fx-padding: 0;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.menu-item:focused {
+    -fx-background-color: transparent;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #737373;
+}
+
+.context-menu {
+    -fx-effect: none;
+    -fx-border-color: #25abf2;
+}
+
+#dateChooserButton {
+    -fx-graphic: url('ic_date_range_black_24dp_1x.png');
+}
+
+#timeChooserButton {
+    -fx-graphic: url('ic_access_time_black_24dp_1x.png');
+}
+
+.month-arrow {
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-pref-height: 20px;
+    -fx-text-fill: black;
+}
+
+.month-label {
+    -fx-font-size: 14px;
+    -fx-pref-height: 20px;
+    -fx-padding: 4px 8px 4px 8px;
+}
+
+.any-cell {
+    -fx-padding: 0;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
+.any-cell > .span {
+    -fx-padding: 0;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+}
+
+.weekday-cell {
+    -fx-background-color: #dddddd;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+
+    -fx-text-alignment: left;
+}
+
+.weekday-cell > * {
+    -fx-text-fill: #ffffff !important;
+    -fx-font-size: 12px;
+}
+
+.weekday-cell-weekend > * {
+    -fx-text-fill: #aaaaaa !important;
+}
+
+.week-of-year-cell {
+    -fx-background-color: #d32197;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-text-alignment: left;
+}
+
+.calendar-cell {
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-text-alignment: left;
+}
+
+.calendar-cell > * {
+    -fx-text-fill: #828282 !important;
+    -fx-font-size: 12px;
+}
+
+.calendar-cell:hover {
+    -fx-background-color: #d5effd;
+}
+
+.calendar-cell:pressed {
+    -fx-background-color: #25abf2;
+}
+
+.calendar-cell:pressed > * {
+    -fx-text-fill: #ffffff !important;
+    -fx-font-size: 12px;
+}
+
+.calendar-cell-inactive {
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-text-alignment: left;
+}
+
+.calendar-cell-inactive > * {
+    -fx-text-fill: #dddddd !important;
+    -fx-font-size: 12px;
+}
+
+.calendar-cell-today {
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-text-alignment: left;
+}
+
+.calendar-cell-today > * {
+    -fx-text-fill: #25abf2 !important;
+    -fx-font-size: 12px;
+}
+
+.calendar-cell-selected {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-text-alignment: left;
+    -fx-background-color: #25abf2;
+}
+
+.calendar-cell-selected > * {
+    -fx-text-fill: #ffffff !important;
+    -fx-font-size: 12px;
+}
+
+.any-time-cell {
+    -fx-max-width: 30px;
+    -fx-max-height: 40px;
+}
+
+.any-time-cell > .label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #25abf2;
+}
+
+.time-arrow {
+    -fx-text-fill: #3CA4DA !important;
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-font-size: 12px;
+}
+
+.time-cell {
+    -fx-background-color: #d5effd;
+}
+
+.time-cell > .label {
+    -fx-text-fill: #25abf2 !important;
+}
+
+.time-cell-selected {
+    -fx-background-color: #25abf2;
+}
+
+.time-cell-selected > .label {
+    -fx-text-fill: #ffffff !important;
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_dateundtimepicker" default="compile.module.dateundtimepicker">
+  <dirname property="module.dateundtimepicker.basedir" file="${ant.file.module_dateundtimepicker}"/>
+  
+  <property name="module.jdk.home.dateundtimepicker" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.dateundtimepicker" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.dateundtimepicker" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.dateundtimepicker" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="dateundtimepicker.output.dir" value="${module.dateundtimepicker.basedir}/out/production/DateUndTimePicker"/>
+  <property name="dateundtimepicker.testoutput.dir" value="${module.dateundtimepicker.basedir}/out/test/DateUndTimePicker"/>
+  
+  <path id="dateundtimepicker.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="dateundtimepicker.module.production.classpath">
+    <path refid="${module.jdk.classpath.dateundtimepicker}"/>
+  </path>
+  
+  <path id="dateundtimepicker.runtime.production.module.classpath">
+    <pathelement location="${dateundtimepicker.output.dir}"/>
+  </path>
+  
+  <path id="dateundtimepicker.module.classpath">
+    <path refid="${module.jdk.classpath.dateundtimepicker}"/>
+    <pathelement location="${dateundtimepicker.output.dir}"/>
+  </path>
+  
+  <path id="dateundtimepicker.runtime.module.classpath">
+    <pathelement location="${dateundtimepicker.testoutput.dir}"/>
+    <pathelement location="${dateundtimepicker.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.dateundtimepicker">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.dateundtimepicker">
+    <patternset refid="excluded.from.module.dateundtimepicker"/>
+  </patternset>
+  
+  <path id="dateundtimepicker.module.sourcepath">
+    <dirset dir="${module.dateundtimepicker.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.dateundtimepicker" depends="compile.module.dateundtimepicker.production,compile.module.dateundtimepicker.tests" description="Compile module DateUndTimePicker"/>
+  
+  <target name="compile.module.dateundtimepicker.production" depends="register.custom.compilers" description="Compile module DateUndTimePicker; production classes">
+    <mkdir dir="${dateundtimepicker.output.dir}"/>
+    <javac2 destdir="${dateundtimepicker.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.dateundtimepicker}/javac">
+      <compilerarg line="${compiler.args.dateundtimepicker}"/>
+      <bootclasspath refid="dateundtimepicker.module.bootclasspath"/>
+      <classpath refid="dateundtimepicker.module.production.classpath"/>
+      <src refid="dateundtimepicker.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.dateundtimepicker"/>
+    </javac2>
+    
+    <copy todir="${dateundtimepicker.output.dir}">
+      <fileset dir="${module.dateundtimepicker.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.dateundtimepicker.tests" depends="register.custom.compilers,compile.module.dateundtimepicker.production" description="compile module DateUndTimePicker; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.dateundtimepicker" description="cleanup module">
+    <delete dir="${dateundtimepicker.output.dir}"/>
+    <delete dir="${dateundtimepicker.testoutput.dir}"/>
+  </target>
+</project>
