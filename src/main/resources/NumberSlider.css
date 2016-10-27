@@ -1,0 +1,31 @@
+.number-slider {
+    -fx-skin: "main.java.NumberSliderSkin";
+}
+
+.number-slider .time-arrow {
+    -fx-text-fill: #3CA4DA;
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+
+
+.number-slider .cell {
+    -fx-padding: 4px 0;
+    -fx-background-color: #d5effd;
+    -fx-border-insets: 4px 0;
+    -fx-background-insets: 4px 0;
+}
+
+.number-slider .cell .label {
+    -fx-text-fill: #25abf2;
+}
+
+.number-slider .cell-selected {
+    -fx-background-color: #25abf2;
+}
+
+.number-slider .cell-selected > .label {
+    -fx-text-fill: #ffffff;
+}

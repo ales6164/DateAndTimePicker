@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto-Bold.ttf');
+}
+
+.root {
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 11pt;
+}
+
+.button {
+    -fx-font-size: 8pt;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+}
+
+.button:pressed {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+}
+
+.main {
+    -fx-min-height: 250px;
+    -fx-min-width: 400px;
+    -fx-padding: 16px;
+}
+
+.with-padding {
+    -fx-padding: 0 8px;
+}
+
+.text-field {
+    -fx-min-height: 40px;
+    -fx-min-width: 200px;
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: #25abf2;
+    -fx-border-width: 1px;
+    -fx-text-fill: black;
+    -fx-padding: 0 4px;
+}
+
+.menu-button {
+    -fx-min-height: 40px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-border-color: #25abf2;
+    -fx-border-width: 1px 1px 1px 0;
+    -fx-text-fill: black;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.menu-item {
+    -fx-effect: none;
+    -fx-background-color: transparent;
+}
+
+.menu-item:focused {
+    -fx-effect: none;
+    -fx-background-color: transparent;
+}
+
+.context-menu {
+    -fx-effect: none;
+    -fx-border-color: #25abf2;
+}
+
+#openPopupBtn {
+    -fx-graphic: url('ic_access_time_black_24dp_1x.png');
+}
+
+.time-divider {
+    -fx-padding: 4px 8px;
+    -fx-text-fill: #25abf2;
+    -fx-border-insets: 4px 0;
+    -fx-background-insets: 4px 0;
+}
